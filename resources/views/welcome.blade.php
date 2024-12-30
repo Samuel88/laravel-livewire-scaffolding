@@ -8,5 +8,8 @@
 </head>
 <body>
     <h1>Hello LiveWire World !!</h1>
+    <livewire:counter/>
+    <livewire:posts.create-posts/>
+    <livewire:todo/>
 </body>
 </html>

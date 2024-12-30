@@ -6,7 +6,14 @@ use Livewire\Component;
 
 class CreatePosts extends Component
 {
-    public string $title = "Post title...";
+    public string $title;
+    public string $content;
+
+    public function save() {
+        return redirect()
+            ->to('/')
+            ->with('status', 'Post Created');
+    }
 
     public function render()
     {
