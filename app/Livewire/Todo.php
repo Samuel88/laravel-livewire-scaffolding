@@ -7,9 +7,12 @@ use Livewire\Component;
 class Todo extends Component
 {
     public array $todos = [];
-    public function addTodo($todo) {
-        $this->todos[] = $todo;
-        $this->js('console.log("Ciao")');
+    public string $todo = '';
+
+    public function addTodo() {
+        $this->todos[] = $this->pull('todo');
+
+        //$this->js(expression: 'console.log("Ciao")');
         return true;
     }
 
